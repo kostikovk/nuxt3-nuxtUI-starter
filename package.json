@@ -1,0 +1,55 @@
+{
+  "name": "nuxt3-template",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev -o -p 3333",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint:eslint": "eslint --ext .ts,.js,.vue . --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
+    "lint:stylelint": "stylelint **/*.{vue,scss}",
+    "lint": "npm-run-all lint:*",
+    "fix:prettier": "prettier --write --list-different .",
+    "fix:eslint": "eslint --ext .ts,.js,.vue . --ignore-path .gitignore . --fix",
+    "fix:stylelint": "stylelint **/*.{vue,scss} --fix",
+    "fix": "npm-run-all fix:*",
+    "commit": "npx git-cz",
+    "commit:all": "git add . && npx git-cz",
+    "prepare": "node ./prepare.cjs",
+    "reinstan-deps": "npx rimraf node_modules && yarn install"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "@vicons/ionicons5": "^0.12.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "naive-ui": "^2.36.0",
+    "npm-run-all": "^4.1.5",
+    "nuxt": "^3.9.0",
+    "prettier": "^3.1.1",
+    "sass": "^1.69.5",
+    "stylelint": "^16.1.0",
+    "stylelint-config-recess-order": "^4.4.0",
+    "stylelint-config-recommended-vue": "^1.5.0",
+    "stylelint-config-standard-scss": "^12.0.0",
+    "stylelint-prettier": "^5.0.0",
+    "stylelint-scss": "^6.0.0",
+    "typescript": "^5.3.3",
+    "vfonts": "^0.0.3",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-stylelint": "^5.3.1"
+  },
+  "overrides": {
+    "vue": "latest"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.5.1",
+    "pinia": "^2.1.7"
+  }
+}
