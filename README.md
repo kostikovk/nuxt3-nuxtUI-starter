@@ -1,5 +1,7 @@
 # Nuxt 3 + NuxtUI + Codestyle Starter
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3bf4afed-c00b-4ab2-9f14-2ec00719d491/deploy-status)](https://app.netlify.com/sites/nuxt3-nuxtui-codestyle/deploys)
+
 Look at the [Nuxt 3](https://nuxt.com/docs/getting-started/introduction) and [NuxtUI](https://ui.nuxt.com/) documentation to learn more.
 
 ## Tools and commands:
@@ -49,10 +51,12 @@ yarn fix
 6. **Commitizen**. Using [git-cz](https://github.com/streamich/git-cz)
 
 ```bash
-yarn ct
+yarn commit
+# or it's the same but committing all files
+yarn commit:all
 ```
 
-5. **Husky** `.husky/pre-commit`
+7. **Husky** `.husky/pre-commit`
 
 ```bash
 #!/usr/bin/env sh
@@ -61,7 +65,7 @@ yarn ct
 yarn lint:fix
 ```
 
-6. **Husky** `.husky/pre-push`
+8. **Husky** `.husky/pre-push`
 
 ```bash
 #!/usr/bin/env sh
@@ -71,7 +75,14 @@ yarn lint:fix
 ```
 
 ## Development
-
+I'm using [NVM](https://github.com/nvm-sh/nvm) and [Yarn](https://yarnpkg.com/getting-started/install) if you don't have it, install it first.
+```bash
+# if you don't have node 18 version you will need to install it first
+nvm use
+```
+```bash
+yarn install
+```
 ```bash
 yarn dev
 ```
