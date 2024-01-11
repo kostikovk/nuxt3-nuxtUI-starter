@@ -1,8 +1,18 @@
 {
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.stylelint": true
+    "source.fixAll.eslint": "explicit"
   },
-  "eslint.validate": ["{**/*, *}.{js, ts, html, vue}"],
-  "stylelint.validate": ["css", "postcss", "scss", "vue"]
+  "eslint.validate": ["{**/*, *}.{js, cjs, ts, html, vue}"],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.experimental.configFile": "tailwind.config.ts",
+  "tailwindCSS.experimental.classRegex": [
+    ["ui:\\s*{([^)]*)\\s*}", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["/\\*ui\\*/\\s*{([^;]*)}", ":\\s*[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+  "tailwindCSS.classAttributes": ["class", "className", "ngClass", "ui"]
 }

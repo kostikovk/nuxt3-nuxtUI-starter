@@ -1,40 +1,37 @@
 <template>
-  <NLayout
-    class="root-layout"
-    position="absolute"
-  >
-    <TheHeader />
+  <div class="pancake-stack">
+    <StarsEffect />
 
-    <NLayoutContent>
-      <div class="container p-y">
+    <header class="py-3">
+      <UContainer>
+        <ColorModeButton />
+
+        <UButton
+          icon="i-simple-icons-github"
+          class="ml-3"
+          to="https://github.com/KosKosovuch/nuxt3-template"
+          target="_blank"
+        />
+      </UContainer>
+    </header>
+
+    <main>
+      <UContainer>
         <slot name="default" />
-      </div>
-    </NLayoutContent>
+      </UContainer>
+    </main>
 
-    <TheFooter />
-  </NLayout>
+    <footer>
+      <UContainer>Footer</UContainer>
+    </footer>
+  </div>
 </template>
 
-<script setup lang="ts">
-  import { NLayout, NLayoutContent } from 'naive-ui'
-</script>
-
 <style lang="scss" scoped>
-  .p-y {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-
-  .root-layout {
-    > :deep(.n-layout-scroll-container) {
-      display: flex;
-      flex-direction: column;
-
-      @include overflow(hidden, auto);
-    }
-
-    .n-layout-content {
-      flex: 1 1 auto;
-    }
+  .pancake-stack {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    min-height: 100svh;
   }
 </style>
