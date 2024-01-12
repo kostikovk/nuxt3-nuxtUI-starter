@@ -71,7 +71,7 @@ yarn lint:fix
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-# npm run build
+# yarn build
 ```
 
 ## Development
@@ -92,7 +92,7 @@ yarn dev
 Build the application for production:
 
 ```bash
-yarm build
+yarn build
 ```
 
 Locally preview production build:
